@@ -63,7 +63,7 @@ RUN apk add --no-cache bash openssh ca-certificates jq curl openssl git \
     )" \
  && apk add --virtual .rundeps $runDeps \
  && apk del .build-deps 
-az aks install-cli
+RUN az aks install-cli
 
 WORKDIR /
 
